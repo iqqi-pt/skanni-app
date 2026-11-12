@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/skanni-app/">
+<!-- BASE:END -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="theme-color" content="#121826">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Cg%20transform%3D%22translate(0%200)%20scale(1.0)%22%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2292%22%20height%3D%2292%22%20rx%3D%2226%22%20fill%3D%22%23121826%22%2F%3E%3Ccircle%20cx%3D%2234%22%20cy%3D%2234%22%20r%3D%2212%22%20fill%3D%22%23FF5A36%22%2F%3E%3Ccircle%20cx%3D%2266%22%20cy%3D%2234%22%20r%3D%2212%22%20fill%3D%22%23FF5A36%22%2F%3E%3Ccircle%20cx%3D%2234%22%20cy%3D%2266%22%20r%3D%2212%22%20fill%3D%22%23FF5A36%22%2F%3E%3Ccircle%20cx%3D%2266%22%20cy%3D%2266%22%20r%3D%2210.5%22%20fill%3D%22none%22%20stroke%3D%22%23FF5A36%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%224%203.5%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<style id="skanni-language-flags-style">
+.skanni-language-picker{position:relative;flex:0 0 auto;font-family:"Sora",sans-serif}
+.skanni-language-trigger{display:flex;align-items:center;gap:8px;min-height:39px;border:1px solid #dfe6ea;border-radius:12px;background:#fff;color:#121826;padding:6px 10px;font-size:12px;font-weight:700;cursor:pointer}
+.skanni-flag{display:inline-flex;width:26px;height:18px;border-radius:3px;overflow:hidden;flex:none;box-shadow:0 0 0 1px rgba(18,24,38,.16)}
+.skanni-flag svg{display:block;width:100%;height:100%}
+.skanni-language-menu{position:absolute;z-index:300;top:calc(100% + 6px);right:0;min-width:165px;border:1px solid #dfe6ea;border-radius:14px;padding:5px;background:#fff;box-shadow:0 15px 35px rgba(18,24,38,.16)}
+.skanni-language-menu[hidden]{display:none!important}
+.skanni-language-option{display:flex;align-items:center;gap:11px;padding:10px;border:0;border-radius:9px;background:transparent;color:#121826;width:100%;font-size:12px;font-weight:600;text-align:left;cursor:pointer}
+.skanni-language-option:hover,.skanni-language-option[aria-checked="true"]{background:#F6F5F1}
+.skanni-language-trigger:focus-visible,.skanni-language-option:focus-visible{outline:2px solid #FF5A36;outline-offset:2px}
+</style>
+
+<!-- SEO Meta Tags -->
+<title>SKANNI — Merchant Dashboard</title>
+<meta name="description" content="Private SKANNI merchant dashboard for managing digital loyalty programs." />
+<meta property="og:title" content="SKANNI — Merchant Dashboard" />
+<meta property="og:description" content="Private SKANNI merchant dashboard for managing digital loyalty programs." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SKANNI — Merchant Dashboard" />
+<meta name="twitter:description" content="Private SKANNI merchant dashboard for managing digital loyalty programs." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="dashboard-perkly";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=9071');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='RQy3uiNzey';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='RQy3uiNzey';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen" aria-live="polite">
+    <div class="loading-inner">
+      <div class="spinner" aria-hidden="true"></div>
+      <strong>Securing your SKANNI workspace…</strong>
+    </div>
+  </div>
+
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" data-section="sidebar">
+      <a class="brand" href="#overview" aria-label="SKANNI dashboard">
+        <span class="skanni-sidebar-icon"><svg class="skanni-official-symbol" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><g transform="translate(0 0) scale(1.0)"><rect x="4" y="4" width="92" height="92" rx="26" fill="#121826"/><circle cx="34" cy="34" r="12" fill="#FF5A36"/><circle cx="66" cy="34" r="12" fill="#FF5A36"/><circle cx="34" cy="66" r="12" fill="#FF5A36"/><circle cx="66" cy="66" r="10.5" fill="none" stroke="#FF5A36" stroke-width="3" stroke-dasharray="4 3.5"/></g></svg></span><span class="skanni-sidebar-type"><strong>skanni</strong><small>by iQQi</small></span>
+      </a>
+
+      <div class="workspace-label">Merchant workspace</div>
+      <nav class="side-nav" aria-label="Dashboard navigation">
+        <button class="nav-button active" data-view="overview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 13h6V4H4v9Zm10 7h6v-9h-6v9ZM4 20h6v-3H4v3Zm10-13h6V4h-6v3Z"/></svg>
+          Overview
+        </button>
+        <button class="nav-button" data-view="card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18"/></svg>
+          My Loyalty Card
+        </button>
+        <button class="nav-button" data-view="rewards">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 7v14M12 7H7.5a2.5 2.5 0 1 1 2.1-3.86L12 7Zm0 0h4.5a2.5 2.5 0 1 0-2.1-3.86L12 7Z"/></svg>
+          Rewards
+        </button>
+        <button class="nav-button" data-view="acquisition">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM15 14h2v2h-2zM19 14h1v3h-3v3h-3v-2"/></svg>
+          Get Customers
+        </button>
+        <button class="nav-button" data-view="customers">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Customers
+          <span class="nav-badge" id="customerBadge">—</span>
+        </button>
+        <button class="nav-button" data-view="scanner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3M7 12h10"/></svg>
+          Staff Scanner
+        </button>
+        <button class="nav-button" data-view="billing">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M7 15h3"/></svg>
+          Billing
+        </button>
+        <button class="nav-button" data-view="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3v-4h.1A1.7 1.7 0 0 0 4.6 8.6a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.1A1.7 1.7 0 0 0 15.4 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.13.37.34.7.6 1 .3.27.68.4 1.1.4h.1v4h-.1a1.7 1.7 0 0 0-1.7.6Z"/></svg>
+          Settings
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="merchant-mini">
+          <div class="avatar" id="merchantAvatar">P</div>
+          <div>
+            <strong id="merchantName">SKANNI merchant</strong>
+            <span id="merchantEmail">Secure account</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar" data-section="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div class="page-heading">
+          <h1 id="pageTitle">Overview</h1>
+          <p id="pageSubtitle">Your loyalty program at a glance.</p>
+        </div>
+        <div class="top-actions">
+          <div class="skanni-language-picker">
+            <button type="button" class="skanni-language-trigger" id="skanniLanguageTrigger" aria-label="Choose dashboard language" aria-haspopup="true" aria-expanded="false">
+              <span class="skanni-flag" id="skanniActiveFlag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="9"/><path d="M0 0 60 40M60 0 0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="13"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></svg></span><span id="skanniLanguageCode">EN</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <div class="skanni-language-menu" id="skanniLanguageMenu" role="menu" hidden>
+              <button type="button" class="skanni-language-option" role="menuitemradio" aria-checked="false" data-skanni-lang="en"><span class="skanni-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="9"/><path d="M0 0 60 40M60 0 0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="13"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></svg></span><span>English</span></button><button type="button" class="skanni-language-option" role="menuitemradio" aria-checked="false" data-skanni-lang="pt"><span class="skanni-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="24" height="40" fill="#006600"/><rect x="24" width="36" height="40" fill="#FF0000"/><circle cx="24" cy="20" r="9" fill="none" stroke="#FFCC00" stroke-width="3"/><path d="M18 13h12v13l-6 4-6-4z" fill="#fff" stroke="#B31924" stroke-width="1.5"/><path d="M24 14v12M19 20h10" stroke="#1759A3" stroke-width="2"/></svg></span><span>Português</span></button><button type="button" class="skanni-language-option" role="menuitemradio" aria-checked="false" data-skanni-lang="es"><span class="skanni-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="60" height="40" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/><path d="M16 16h8v9l-4 2-4-2z" fill="#fff" stroke="#AA151B" stroke-width="1.4"/><path d="M20 13v13" stroke="#AA151B" stroke-width="2"/></svg></span><span>Español</span></button><button type="button" class="skanni-language-option" role="menuitemradio" aria-checked="false" data-skanni-lang="fr"><span class="skanni-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="40" fill="#002395"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#ED2939"/></svg></span><span>Français</span></button>
+            </div>
+            <select id="skanniLanguage" aria-label="Dashboard language" hidden><option value="en">EN</option><option value="pt">PT</option><option value="es">ES</option><option value="fr">FR</option></select>
+          </div>
+          <span class="connection-pill connected" id="sheetPill">
+            <span class="dot"></span><span>Merchant account connected</span>
+          </span>
+          <span class="connection-pill" id="walletPill">
+            <span class="dot"></span><span>Wallet not connected</span>
+          </span>
+          <span class="connection-pill" id="stripePill">
+            <span class="dot"></span><span>Billing inactive</span>
+          </span>
+          <button class="button small secondary" id="refreshButton">Refresh</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="view active" id="view-overview" data-section="overview">
+          <div class="notice" style="margin-bottom:20px">
+            <div><strong>Live loyalty program:</strong> Manage your loyalty program, customer cards and rewards in one place.</div>
+          </div>
+
+          <div id="overviewContent">
+                          <div class="section-intro">
+                <div>
+                  <p class="eyebrow">Good to see you</p>
+                  <h2 id="overviewGreeting">Your loyalty program</h2>
+                  <p>Track customer cards, manage rewards and share your QR code.</p>
+                </div>
+                <div class="button-row" style="margin:0;display:flex;gap:10px;flex-wrap:wrap"><button class="button" data-go="card">Customize card &amp; logo</button><button class="button secondary" data-go="customers">Manage customer cards</button><button class="button secondary" data-go="acquisition">Get QR code</button></div>
+              </div>
+
+            <div class="grid grid-4" id="metricsGrid">
+              <article class="panel metric-card">
+                <div class="metric-label">Total cards issued</div>
+                <div class="metric-value" id="metricIssued">—</div>
+                <div class="metric-detail" id="metricIssuedDetail">Updates when cards are issued</div>
+              </article>
+              <article class="panel metric-card">
+                <div class="metric-label">Active cards</div>
+                <div class="metric-value" id="metricActive">—</div>
+                <div class="metric-detail">Cards currently active</div>
+              </article>
+              <article class="panel metric-card">
+                <div class="metric-label">Wallet installs</div>
+                <div class="metric-value" id="metricInstalled">—</div>
+                <div class="metric-detail" id="metricPlatforms">Wallet installation information</div>
+              </article>
+              <article class="panel metric-card">
+                <div class="metric-label">Rewards redeemed</div>
+                <div class="metric-value" id="metricRedeemed">—</div>
+                <div class="metric-detail" id="metricRedeemedDetail">Confirmed reward redemptions</div>
+              </article>
+            </div>
+
+            <div class="grid split" style="margin-top:18px">
+              <article class="panel">
+                <div class="panel-head">
+                  <div>
+                    <h3>Launch checklist</h3>
+                    <p class="panel-copy">Finish these steps before promoting your program.</p>
+                  </div>
+                </div>
+                <div class="checklist" id="launchChecklist"></div>
+              </article>
+              <article class="panel">
+                <div class="panel-head">
+                  <div>
+                    <h3>Recent activity</h3>
+                    <p class="panel-copy">Recent loyalty program activity.</p>
+                  </div>
+                </div>
+                <div class="empty" id="activityEmpty">
+                  <div class="empty-icon">
+                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+                  </div>
+                  <h3>No activity available</h3>
+                  <p>Activity will appear when events are available.</p>
+                </div>
+                <div id="activityList" hidden></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-onboarding" data-section="onboarding">
+          <div class="onboarding-wrap">
+            <div class="section-intro">
+              <div>
+                <p class="eyebrow">Welcome to SKANNI</p>
+                <h2>Build your loyalty card</h2>
+                <p>Create a digital loyalty card customers can add to their phones.</p>
+              </div>
+            </div>
+
+            <div class="stepper" id="stepper" aria-label="Onboarding progress">
+              <span class="step-dot active"></span><span class="step-dot"></span><span class="step-dot"></span><span class="step-dot"></span><span class="step-dot"></span>
+            </div>
+
+            <article class="panel onboarding-card">
+              <div class="onboarding-step active" data-step="1">
+                <div class="panel-head"><div><h3>Business profile</h3><p class="panel-copy">Add your business details to personalize your loyalty card.</p></div></div>
+                <div class="form-grid">
+                  <div class="field"><label for="onBusinessName">Business name</label><input class="input" id="onBusinessName" autocomplete="organization" required></div>
+                  <div class="field"><label for="onCategory">Business category</label><select id="onCategory" required><option value="">Choose a category</option><option>Coffee shop</option><option>Restaurant</option><option>Salon</option><option>Barbershop</option><option>Bakery</option><option>Independent retailer</option><option>Other</option></select></div>
+                  <div class="field"><label for="onEmail">Contact email</label><input class="input" id="onEmail" type="email" autocomplete="email" required></div>
+                  <div class="field"><label for="onCountry">Country</label><input class="input" id="onCountry" autocomplete="country-name" required></div>
+                  <div class="field full"><label for="onWebsite">Website <span style="color:var(--muted);font-weight:500">(optional)</span></label><input class="input" id="onWebsite" type="url" placeholder="https://"></div>
+                </div>
+              </div>
+
+              <div class="onboarding-step" data-step="2">
+                <div class="grid split">
+                  <div>
+                    <div class="panel-head"><div><h3>Card design</h3><p class="panel-copy">Use high-contrast colors and a clear square logo.</p></div></div>
+                    <div class="form-grid">
+                      <div class="field full">
+                        <label for="onLogo">Company logo</label>
+                        <label class="logo-drop" for="onLogo"><span><strong>Choose a logo</strong><br><small>PNG, JPG or WebP. Use a clear business logo.</small></span></label>
+                        <input id="onLogo" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+                      </div>
+                      <div class="field"><label for="onBackground">Background</label><div class="color-row"><input id="onBackground" type="color" value="#071b2c"><input class="input color-text" data-for="onBackground" value="#071B2C" maxlength="7"></div></div>
+                      <div class="field"><label for="onAccent">Accent</label><div class="color-row"><input id="onAccent" type="color" value="#cfe21b"><input class="input color-text" data-for="onAccent" value="#CFE21B" maxlength="7"></div></div>
+                      <div class="field full"><small id="contrastMessage">Choose colors that keep the card easy to read.</small></div>
+                    </div>
+                  </div>
+                  <div class="wallet-stage">
+                    <div class="wallet-label">Apple Wallet style</div>
+                    <div class="wallet-card live-card">
+                      <div class="wallet-brand"><span class="wallet-logo-fallback">S</span><div><strong class="preview-business">Your business</strong><span>Loyalty card</span></div></div>
+                      <div class="punches preview-punches"></div>
+                      <div class="wallet-reward"><small>Your reward</small><strong class="preview-reward">Free treat</strong></div>
+                    </div>
+                    <div class="wallet-label">Preview of your digital loyalty card.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="onboarding-step" data-step="3">
+                <div class="panel-head"><div><h3>Loyalty rules</h3><p class="panel-copy">Keep the reward simple and easy for customers to understand.</p></div></div>
+                <div class="form-grid">
+                  <div class="field"><label for="onStamps">Required stamps</label><input class="input" id="onStamps" type="number" min="2" max="50" value="8" required></div>
+                  <div class="field"><label for="onReward">Reward name</label><input class="input" id="onReward" value="Free coffee" required></div>
+                  <div class="field full"><label for="onDescription">Reward description</label><textarea id="onDescription" required>Collect 8 stamps and get a free coffee.</textarea></div>
+                  <div class="field full"><label for="onTerms">Terms and conditions <span style="color:var(--muted);font-weight:500">(optional)</span></label><textarea id="onTerms" rows="6" placeholder="Program terms are suggested automatically."></textarea><small>Suggested loyalty rules. You must review them before use.</small></div>
+                </div>
+              </div>
+
+              <div class="onboarding-step" data-step="4">
+                <div class="panel-head"><div><h3>Create your real program</h3><p class="panel-copy">SKANNI will securely create your loyalty program.</p></div></div>
+                <div class="notice">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 17h.01"/></svg>
+                  <div>Your program is ready to share once Wallet confirms its creation.</div>
+                </div>
+                <div id="creationSummary" style="margin-top:18px"></div><div class="notice" id="perklyBridgePanel"><strong>Automatic Wallet setup</strong><p id="perklyBridgeStatus">Your program will be created automatically after your business details are complete. No technical configuration is required.</p></div>
+                <div class="form-message" id="createProgramMessage" style="margin-top:16px"></div>
+              </div>
+
+              <div class="onboarding-step" data-step="5">
+                <div class="panel-head"><div><h3>Ready to launch</h3><p class="panel-copy">Once your card is created, share its QR code with customers.</p></div></div>
+                <div class="qr-layout">
+                  <div class="qr-box"><div id="onboardingQr"></div></div>
+                  <div>
+                    <p class="eyebrow">Customer enrollment URL</p>
+                    <div class="link-box" id="onboardingJoinUrl">Waiting for program creation</div>
+                    <div class="button-row">
+                      <button class="button" id="onCopyLink">Copy link</button>
+                      <button class="button secondary" data-go="acquisition">Open launch tools</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="onboarding-actions">
+                <button class="button secondary" id="onBack" disabled>Back</button>
+                <button class="button" id="onNext">Continue</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-card" data-section="loyalty-card">
+          <div class="section-intro">
+            <div><p class="eyebrow">Card studio</p><h2>My Loyalty Card</h2><p>Upload your business logo, choose your two card colors and edit the loyalty reward. Save to update your Wallet program.</p></div>
+          </div>
+          <div class="grid split">
+            <article class="panel">
+              <form id="cardForm">
+                <div class="form-grid">
+                  <div class="field full"><label for="cardBusinessName">Business name</label><input class="input" id="cardBusinessName" required></div>
+                  <div class="field full"><label for="cardLogo">Upload / replace logo</label><input class="input" id="cardLogo" type="file" accept="image/png,image/jpeg,image/webp"><small>PNG, JPG or WebP, max 240 KB</small><img id="cardLogoPreview" hidden alt="Logo preview" style="width:84px;max-height:84px;object-fit:contain;margin-top:8px;border-radius:10px"></div>
+                  <div class="field"><label for="cardBackground">Background color</label><div class="color-row"><input id="cardBackground" type="color" value="#071b2c"><input class="input color-text" data-for="cardBackground" value="#071B2C"></div></div>
+                  <div class="field"><label for="cardAccent">Accent color</label><div class="color-row"><input id="cardAccent" type="color" value="#cfe21b"><input class="input color-text" data-for="cardAccent" value="#CFE21B"></div></div>
+                  <div class="field"><label for="cardStamps">Number of stamps</label><input class="input" id="cardStamps" type="number" min="2" max="50" required></div>
+                  <div class="field"><label for="cardReward">Reward text</label><input class="input" id="cardReward" required></div>
+                  <div class="field full">
+                    <div class="notice"><div><strong>Existing cards:</strong> Changes may affect issued cards. Check an installed card after updating your program.</div></div>
+                  </div>
+                  <div class="form-actions"><span class="form-message" id="cardMessage"></span><button class="button" type="submit">Save to wallet program</button></div>
+                </div>
+              </form>
+            </article>
+            <article class="panel">
+              <div class="wallet-stage">
+                <div class="wallet-label">Live visual preview</div>
+                <div class="wallet-card live-card">
+                  <div class="wallet-brand"><span class="wallet-logo-fallback">P</span><div><strong class="preview-business">Your business</strong><span>Loyalty card</span></div></div>
+                  <div class="punches preview-punches"></div>
+                  <div class="wallet-reward"><small>Your reward</small><strong class="preview-reward">Free treat</strong></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-rewards" data-section="rewards">
+          <div class="section-intro">
+            <div><p class="eyebrow">Program rules</p><h2>Rewards</h2><p>Edit your reward and stamp requirements. Program terms remain a browser draft until publishing is supported.</p></div>
+          </div>
+          <article class="panel" style="max-width:850px">
+            <form id="rewardForm">
+              <div class="form-grid">
+                <div class="field"><label for="rewardName">Reward name</label><input class="input" id="rewardName" required></div>
+                <div class="field"><label for="rewardStamps">Required stamps</label><input class="input" id="rewardStamps" type="number" min="2" max="50" required></div>
+                <div class="field full"><label for="rewardDescription">Description</label><textarea id="rewardDescription" required></textarea></div>
+                <div class="field full"><label for="rewardTerms">Terms and conditions</label><textarea id="rewardTerms" rows="6"></textarea><small id="rewardTermsStatus">Program terms are currently saved as a browser draft, not published in the customer joining flow.</small></div>
+                <div class="field full">
+                  <div class="notice">
+                    <div><strong>Redemptions:</strong> Once a reward is redeemed, the card follows the Wallet program rules.</div>
+                  </div>
+                </div>
+                <div class="form-actions"><span class="form-message" id="rewardMessage"></span><button class="button" type="submit">Save reward rules</button></div>
+              </div>
+            </form>
+          </article>
+        </section>
+
+        <section class="view" id="view-acquisition" data-section="get-customers">
+          <div class="section-intro">
+            <div><p class="eyebrow">Grow your club</p><h2>Get Customers</h2><p>Share your QR code or enrollment link so customers can collect stamps on their phones.</p></div>
+          </div>
+          <article class="panel">
+            <div id="noJoinUrl" class="empty">
+              <div class="empty-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div>
+              <h3>No enrollment URL available</h3>
+              <p>Create your loyalty card first; your QR code will appear here.</p>
+            </div>
+            <div class="qr-layout" id="joinTools" hidden>
+              <div class="qr-box"><div id="joinQr"></div></div>
+              <div>
+                <p class="eyebrow">Enrollment URL</p>
+                <div class="link-box" id="joinUrl"></div>
+                <div class="button-row">
+                  <button class="button" id="copyJoin">Copy URL</button>
+                  <button class="button secondary" id="downloadPng">Download PNG</button>
+                  <button class="button secondary" id="downloadSvg">Download SVG</button>
+                  <button class="button dark" id="printPoster">Print A4 / A5 poster</button>
+                </div>
+                <div class="notice" style="margin-top:20px">
+                  <div><strong>Poster copy:</strong><br>LOVE COMING BACK?<br>Join our loyalty club.<br>Scan. Collect stamps. Get rewarded.<br>Add your card to Apple Wallet or Google Wallet.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="view" id="view-customers" data-section="customers">
+          <div class="section-intro">
+            <div><p class="eyebrow">Issued loyalty cards</p><h2>Customers</h2><p>View issued cards and manage their status. Suspension and reactivation require confirmation.</p></div>
+          </div>
+          <article class="panel">
+            <div class="table-tools">
+              <div class="search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+                <input class="input" id="customerSearch" type="search" placeholder="Search name or card reference">
+              </div>
+              <select id="customerStatus" aria-label="Filter by status"><option value="">All statuses</option><option value="active">Active</option><option value="eligible">Reward eligible</option><option value="redeemed">Redeemed</option><option value="suspended">Suspended</option><option value="inactive">Inactive</option></select>
+              <select id="customerPlatform" aria-label="Filter by platform"><option value="">All wallets</option><option value="ios">Apple Wallet</option><option value="android">Google Wallet</option></select>
+              <button class="button secondary" id="customerRefresh">Refresh</button>
+            </div>
+            <div id="customerLoading" class="empty" hidden><div class="spinner"></div><p>Loading customer cards…</p></div>
+            <div id="customerEmpty" class="empty">
+              <div class="empty-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/></svg></div>
+              <h3>No customer cards yet</h3>
+              <p>Customer cards will appear here after they join your loyalty program.</p>
+            </div>
+            <div id="customerTableArea" hidden>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Customer</th><th>Card reference</th><th>Stamps</th><th>Status</th><th>Wallet</th><th>Reward</th><th>Manage</th></tr></thead>
+                  <tbody id="customerRows"></tbody>
+                </table>
+              </div>
+              <div class="pagination"><span id="pageInfo">Page 1</span><div class="button-row" style="margin:0"><button class="button small secondary" id="prevPage">Previous</button><button class="button small secondary" id="nextPage">Next</button></div></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="view" id="view-scanner" data-section="staff-scanner">
+          <div class="section-intro">
+            <div><p class="eyebrow">Stamp customer cards</p><h2>Staff Scanner</h2><p>Scan a customer pass or enter its card serial to award stamps and redeem rewards.</p></div>
+          </div>
+          <article class="panel scanner">
+            <div class="notice">
+              <div>Only cards belonging to your business can receive stamps or redeem rewards.</div>
+            </div>
+            <div class="scanner-window" id="scannerWindow">
+              <span id="cameraPlaceholder">Camera is off</span>
+              <video id="scannerVideo" playsinline muted hidden></video>
+              <span class="scanner-frame" aria-hidden="true"></span>
+            </div>
+            <div class="button-row">
+              <button class="button" id="startCamera">Start camera</button>
+              <button class="button secondary" id="stopCamera" disabled>Stop</button>
+            </div>
+            <div class="field" style="margin-top:18px">
+              <label for="scanPayload">Scanner result or card token</label>
+              <input class="input" id="scanPayload" autocomplete="off" placeholder="Scan with a supported camera browser or paste a token">
+              <small>Never paste a wallet administration key. The backend must treat this value as untrusted.</small>
+            </div>
+            <div class="button-row">
+              <button class="button dark" id="lookupCard">Validate card</button>
+            </div>
+            <div id="scanResult" style="margin-top:18px"></div>
+          </article>
+        </section>
+
+        <section class="view" id="view-billing" data-section="billing">
+          <div class="section-intro">
+            <div><p class="eyebrow">Subscription</p><h2>Billing</h2><p>Subscriptions are not active yet. No payments are charged through this dashboard.</p></div>
+          </div>
+          <div class="grid grid-2">
+            <article class="panel">
+              <div class="panel-head"><div><h3>SKANNI monthly</h3><p class="panel-copy">One business and one loyalty program.</p></div><span class="status-pill neutral" id="billingStatus">Unavailable</span></div>
+              <div class="billing-price">$37 <span>USD / month</span></div>
+              <p class="panel-copy" id="renewalDate">No renewal scheduled.</p>
+              <div class="button-row"><button class="button secondary" id="manageBilling" disabled aria-disabled="true">Subscription management not available yet</button></div>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><div><h3>Invoices</h3><p class="panel-copy">Your invoices will appear here when billing becomes available.</p></div></div>
+              <div id="invoiceList" class="empty"><h3>No invoices yet</h3><p>No invoices are available while subscriptions are inactive.</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-settings" data-section="settings">
+          <div class="section-intro">
+            <div><p class="eyebrow">Workspace</p><h2>Settings</h2><p>Update your business information and account settings.</p></div>
+          </div>
+          <div class="grid split">
+            <article class="panel">
+              <div class="panel-head"><div><h3>Business details</h3><p class="panel-copy">Business name, category and country are saved to your SKANNI account.</p></div></div>
+              <form id="settingsForm">
+                <div class="form-grid">
+                  <div class="field"><label for="settingsName">Business name</label><input class="input" id="settingsName" required></div>
+                  <div class="field"><label for="settingsCategory">Category</label><input class="input" id="settingsCategory" required></div>
+                  <div class="field"><label for="settingsEmail">Contact email</label><input class="input" id="settingsEmail" type="email" required></div>
+                  <div class="field"><label for="settingsCountry">Country</label><input class="input" id="settingsCountry" required></div><div class="field full"><label for="settingsSupportEmail">Customer support email (Wallet card)</label><input class="input" id="settingsSupportEmail" type="email" maxlength="254" required placeholder="help@yourbusiness.com"><small>This address is intended for your customers, not for SKANNI account login. The Wallet integration needs backend verification before it is considered updated.</small></div>
+                  <div class="field full"><label for="settingsWebsite">Website</label><input class="input" id="settingsWebsite" type="url"></div>
+                  <div class="form-actions"><span class="form-message" id="settingsMessage"></span><button class="button" type="submit">Save business details</button></div>
+                </div>
+              </form>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><div><h3>Privacy &amp; access</h3><p class="panel-copy">Manage your business account and privacy requests.</p></div></div>
+              <div class="notice"><div><strong>Team access:</strong> Separate staff accounts are not available yet.</div></div>
+              <hr style="border:0;border-top:1px solid var(--border);margin:24px 0">
+              <h3 style="font-size:16px">Delete account data</h3>
+              <p class="panel-copy">Account deletion is not yet available here. Contact SKANNI support for data protection requests.</p>
+              <div class="button-row"><a class="button secondary" id="requestDeletion" href="mailto:hello@skanni.app?subject=SKANNI%20-%20Data%20deletion%20request">Contact support about data deletion</a></div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="poster-preview" id="posterPreview" aria-hidden="true">
+    <img class="poster-logo" id="posterLogo" alt="">
+    <h2>LOVE COMING BACK?</h2>
+    <p>Join our loyalty club.</p>
+    <div class="poster-qr" id="posterQr"></div>
+    <p><strong>Scan. Collect stamps. Get rewarded.</strong></p>
+    <p>Add your card to Apple Wallet or Google Wallet.</p>
+    <div class="poster-reward" id="posterReward">Your reward awaits</div>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  
+<div id="perklyAuthLayer" hidden role="dialog" aria-modal="true" aria-label="SKANNI business account">
+<div class="auth-card"><h2 style="font-size:27px">Welcome to SKANNI</h2><p style="color:#657782;margin:6px 0 18px">Your business. Your loyalty program.</p>
+<form id="perklyAuthForm">
+<label for="perklyAuthMode">Access</label><select id="perklyAuthMode"><option value="signup">Create business account</option><option value="login">Sign in</option></select>
+<div id="perklyBusinessWrap"><label for="perklyBusiness">Business name</label><input id="perklyBusiness" minlength="2" maxlength="90" autocomplete="organization" required></div>
+<label for="perklyEmail">Email</label><input id="perklyEmail" type="email" autocomplete="email" required>
+<label for="perklyPassword">Password (12+ characters)</label><input id="perklyPassword" type="password" minlength="12" autocomplete="current-password" required>
+<p id="perklyAuthError" role="alert"></p>
+<button id="perklyAuthSubmit" type="submit">Create business account</button>
+</form>
+<button type="button" id="perklyLogout" style="background:transparent;margin-top:8px;color:#657782;font-size:12px">Switch account / clear session</button>
+</div></div>
+
+<div id="perklySetupModal" hidden role="dialog" aria-modal="true" aria-label="Configure loyalty card">
+<form class="perkly-setup-card" id="perklySetupForm">
+<h2 style="font-size:27px;margin:0 0 6px">Create your loyalty card</h2><p style="color:#657782;margin:0">Everything you need to launch your program, in one step.</p>
+<div class="perkly-setup-grid">
+<label class="wide">Business name *<input id="setupName" required maxlength="90" minlength="2"></label>
+<label>Category *<select id="setupCategory" required><option value="">Choose one</option><option>Coffee shop</option><option>Restaurant</option><option>Salon</option><option>Barbershop</option><option>Bakery</option><option>Independent retailer</option><option>Other</option></select></label>
+<label>Country *<input id="setupCountry" required maxlength="70"></label>
+<label class="wide">Customer support email *<input id="setupSupportEmail" type="email" required maxlength="254" autocomplete="email" placeholder="help@yourbusiness.com"><small style="font-weight:400">This address should appear on your customers’ Wallet cards. It can be different from your login email.</small></label>
+<label>Stamps required *<input id="setupStamps" type="number" min="2" max="50" value="8" required></label>
+<label>Reward *<input id="setupReward" maxlength="140" placeholder="Free coffee" required></label>
+<label>Background color<input id="setupBackground" type="color" value="#071b2c"></label>
+<label>Accent color<input id="setupAccent" type="color" value="#cfe21b"></label>
+<label class="wide">Business logo (optional)<input id="setupLogo" type="file" accept="image/png,image/jpeg,image/webp"><small style="font-weight:400">PNG, JPG or WebP, max 240 KB. Can be changed later.</small></label>
+<img id="setupLogoPreview" alt="Logo preview" hidden style="width:80px;height:80px;object-fit:contain;border-radius:10px">
+<label class="wide">Loyalty program terms *<textarea id="setupTerms" rows="6" required style="display:block;width:100%;margin-top:6px;padding:12px;font:inherit;line-height:1.6;border:1px solid #ccd5db;border-radius:10px"></textarea><small style="font-weight:400;color:#5B6270">Review the suggested terms and adapt them to your business. These are loyalty program rules, not a privacy policy.</small></label>
+</div>
+<p id="perklySetupError" style="color:#b42318;min-height:20px" role="alert"></p>
+<button type="submit" id="perklySetupSubmit">Create my loyalty card</button>
+</form></div>
+<script>
+    const DRAFT_KEY = "perkly-dev-draft-v1";
+    const state = {
+      connected: true,
+      bootstrap: null,
+      merchant: null,
+      business: null,
+      program: null,
+      subscription: { status: "inactive" },
+      metrics: null,
+      customers: [],
+      customerPage: 1,
+      customerHasNext: false,
+      onboardingStep: 1,
+      pendingLogo: null,
+      mediaStream: null,
+      sheetRows: [],
+      sheetLoading: false
+    };
+
+    const titles = {
+      overview: ["Overview", "Your loyalty program at a glance."],
+      onboarding: ["Set up SKANNI", "Create your real wallet loyalty program."],
+      card: ["My Loyalty Card", "Design and update your wallet card."],
+      rewards: ["Rewards", "Manage the rules behind your loyalty program."],
+      acquisition: ["Get Customers", "Share your enrollment link and printable QR."],
+      customers: ["Customers", "Issued customer loyalty cards."],
+      scanner: ["Staff Scanner", "Securely stamp and redeem customer cards."],
+      billing: ["Billing", "Manage your SKANNI subscription."],
+      settings: ["Settings", "Business details, privacy and access."]
+    };
+
+    const el = id => document.getElementById(id);
+    const api = () => window.__perklyAPI;
+
+    function toast(message, type = "") {
+      const node = document.createElement("div");
+      node.className = "toast " + type;
+      node.textContent = message;
+      el("toastRegion").appendChild(node);
+      setTimeout(() => node.remove(), 4500);
+    }
+
+    function setMessage(id, message = "", type = "") {
+      const node = el(id);
+      if (!node) return;
+      node.textContent = message;
+      node.className = "form-message " + type;
+    }
+
+    function safeText(value, fallback = "—") {
+      return value === null || value === undefined || value === "" ? fallback : String(value);
+    }
+
+    function formatDate(value) {
+      if (!value) return null;
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return null;
+      return new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(date);
+    }
+
+    function initials(name) {
+      return (name || "P").split(/\s+/).slice(0, 2).map(word => word[0]).join("").toUpperCase();
+    }
+
+    function setBusy(button, busy, busyText = "Saving…") {
+      if (!button) return;
+      if (busy) {
+        button.dataset.originalText = button.textContent;
+        button.textContent = busyText;
+        button.disabled = true;
+      } else {
+        button.textContent = button.dataset.originalText || button.textContent;
+        button.disabled = false;
+      }
+    }
+
+    function requireMethod(name) {
+      throw new Error("This action is not available. Please contact support.");
+    }
+
+    function validateResult(result, operation) {
+      if (!result || result.success !== true) {
+        throw new Error(result && result.error ? result.error : operation + " was not confirmed by the server.");
+      }
+      return result;
+    }
+
+    function showView(name, updateHash = true) {
+
+      document.querySelectorAll(".view").forEach(view => view.classList.toggle("active", view.id === "view-" + name));
+      document.querySelectorAll(".nav-button").forEach(button => button.classList.toggle("active", button.dataset.view === name));
+      const copy = titles[name] || titles.overview;
+      el("pageTitle").textContent = copy[0];
+      el("pageSubtitle").textContent = copy[1];
+      if(skanniTranslationNodes)skanniApplyLanguage();
+      if (updateHash) history.replaceState(null, "", "#" + name);
+      closeSidebar();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function openSidebar() {
+      el("sidebar").classList.add("open");
+      el("mobileBackdrop").classList.add("open");
+      el("menuToggle").setAttribute("aria-expanded", "true");
+    }
+
+    function closeSidebar() {
+      el("sidebar").classList.remove("open");
+      el("mobileBackdrop").classList.remove("open");
+      el("menuToggle").setAttribute("aria-expanded", "false");
+    }
+
+    function contrastColor(hex) {
+      const cleaned = hex.replace("#", "");
+      if (!/^[0-9a-f]{6}$/i.test(cleaned)) return "#ffffff";
+      const r = parseInt(cleaned.slice(0, 2), 16);
+      const g = parseInt(cleaned.slice(2, 4), 16);
+      const b = parseInt(cleaned.slice(4, 6), 16);
+      const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+      return luminance > .57 ? "#071b2c" : "#ffffff";
+    }
+
+    function updatePreviews() {
+      const business = el("cardBusinessName").value || el("onBusinessName").value || state.business?.name || "Your business";
+      const reward = el("cardReward").value || el("onReward").value || state.program?.config?.rewardName || "Free treat";
+      const stamps = Math.max(2, Math.min(50, Number(el("cardStamps").value || el("onStamps").value || 8)));
+      const bg = el("cardBackground").value || el("onBackground").value || "#071b2c";
+      const accent = el("cardAccent").value || el("onAccent").value || "#cfe21b";
+      const foreground = contrastColor(bg);
+
+      document.querySelectorAll(".preview-business").forEach(n => n.textContent = business);
+      document.querySelectorAll(".preview-reward").forEach(n => n.textContent = reward);
+      document.querySelectorAll(".live-card").forEach(card => {
+        card.style.background = bg;
+        card.style.color = foreground;
+        card.style.setProperty("--card-accent", accent);
+      });
+      document.querySelectorAll(".preview-punches").forEach(container => {
+        container.innerHTML = "";
+        for (let i = 0; i < Math.min(stamps, 16); i++) {
+          const dot = document.createElement("span");
+          dot.className = "punch";
+          container.appendChild(dot);
+        }
+      });
+
+      const logo = state.pendingLogo || state.program?.brandOverrides?.logo || state.business?.logoUrl;
+      document.querySelectorAll(".wallet-logo, .wallet-logo-fallback").forEach(n => n.remove());
+      document.querySelectorAll(".wallet-brand").forEach(brand => {
+        let logoNode;
+        if (logo) {
+          logoNode = document.createElement("img");
+          logoNode.className = "wallet-logo";
+          logoNode.src = logo;
+          logoNode.alt = "";
+        } else {
+          logoNode = document.createElement("span");
+          logoNode.className = "wallet-logo-fallback";
+          logoNode.textContent = initials(business).slice(0, 1);
+        }
+        brand.prepend(logoNode);
+      });
+
+      const contrastNode = el("contrastMessage");
+      if (contrastNode) {
+        contrastNode.textContent = foreground === "#ffffff"
+          ? "White text provides the clearest contrast on this background."
+          : "Midnight navy text provides the clearest contrast on this background.";
+      }
+    }
+
+    function bindColorControls() {
+      document.querySelectorAll(".color-text").forEach(input => {
+        const picker = el(input.dataset.for);
+        input.addEventListener("input", () => {
+          if (/^#[0-9a-f]{6}$/i.test(input.value)) {
+            picker.value = input.value;
+            updatePreviews();
+          }
+        });
+        picker.addEventListener("input", () => {
+          input.value = picker.value.toUpperCase();
+          updatePreviews();
+        });
+      });
+    }
+
+    function readLogo(file) {
+      return new Promise((resolve, reject) => {
+        if (!file) return resolve(null);
+        if (file.size > 5 * 1024 * 1024) return reject(new Error("Logo must be 5 MB or smaller."));
+        if (!["image/png", "image/jpeg", "image/webp", "image/svg+xml"].includes(file.type)) return reject(new Error("Choose a PNG, JPG, WebP or SVG logo."));
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(new Error("The logo could not be read."));
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function populate() {
+      const b = state.business || {};
+      const p = state.program || {};
+      const config = p.config || {};
+      const brand = p.brandOverrides || {};
+      const merchant = state.merchant || {};
+
+      el("merchantName").textContent = b.name || merchant.name || "Your business";
+      el("merchantEmail").textContent = b.contactEmail || merchant.email || "Your SKANNI account";
+      el("merchantAvatar").textContent = initials(b.name || merchant.name || "D");
+      el("overviewGreeting").textContent = b.name ? b.name + " overview" : "Your loyalty program";
+
+      const map = {
+        onBusinessName: b.name, onCategory: b.category || "Independent retailer", onEmail: b.contactEmail || merchant.email,
+        onCountry: b.country || "",
+        onWebsite: b.website,
+        cardBusinessName: brand.organizationName || b.name,
+        cardStamps: config.maxPunches || 8, cardReward: config.rewardName,
+        rewardName: config.rewardName, rewardStamps: config.maxPunches || 8,
+        rewardDescription: config.rewardDescription || "",
+        rewardTerms: config.terms,
+        settingsName: b.name, settingsCategory: b.category || "",
+        settingsEmail: b.contactEmail || merchant.email, settingsCountry: b.country || "",
+        settingsSupportEmail: b.supportEmail || "",
+        settingsWebsite: b.website
+      };
+      Object.entries(map).forEach(([id, value]) => { if (el(id) && value !== undefined && value !== null) el(id).value = value; });
+
+      const bg = brand.backgroundColor || "#071b2c";
+      const accent = brand.labelColor || brand.foregroundColor || "#cfe21b";
+      ["onBackground", "cardBackground"].forEach(id => el(id).value = bg);
+      ["onAccent", "cardAccent"].forEach(id => el(id).value = accent);
+      document.querySelectorAll('[data-for="onBackground"],[data-for="cardBackground"]').forEach(n => n.value = bg.toUpperCase());
+      document.querySelectorAll('[data-for="onAccent"],[data-for="cardAccent"]').forEach(n => n.value = accent.toUpperCase());
+      updatePreviews();
+      renderMetrics();
+      renderChecklist();
+      renderActivity();
+      renderBilling();
+      renderDraftStatus();
+      renderJoinTools();
+    }
+
+    function renderMetrics() {
+      ["metricIssued","metricActive","metricInstalled","metricRedeemed"].forEach(id => el(id).textContent = "—");
+      el("metricIssuedDetail").textContent = "Loading customer passes from Wallet";
+      el("metricRedeemedDetail").textContent = "Loading confirmed redemptions";
+      el("metricPlatforms").textContent = "Wallet installation events not yet available";
+    }
+
+    function renderChecklist() {
+      const business=state.business||{};
+      const program=state.program||{};
+      const items=[
+        {done:!!(business.name&&business.category&&business.country),title:"Complete business profile",description:"Name, category and country"},
+        {done:Number.isInteger(program.id)&&program.id>0&&!!program.joinUrl,title:"Create loyalty program",description:"Your digital loyalty card"},
+        {done:!!(program.brandOverrides?.logo||state.pendingLogo||business.logoUrl),title:"Add your logo",description:"Make your card recognizable"},
+        {done:!!program.joinUrl,title:"Get your customer QR code",description:"Share your enrollment link or QR code"}
+      ];
+      const container=el("launchChecklist");
+      container.replaceChildren();
+      items.forEach(item=>{
+        const row=document.createElement("div");
+        row.className="skanni-checklist-row"+(item.done?" is-done":"");
+        const marker=document.createElement("span");
+        marker.className="skanni-checklist-marker";
+        marker.setAttribute("aria-label",item.done?"Complete":"Pending");
+        marker.textContent=item.done?"✓":"";
+        const content=document.createElement("div");
+        content.className="skanni-checklist-content";
+        const title=document.createElement("strong");
+        title.className="skanni-checklist-title";
+        title.textContent=item.title;
+        const description=document.createElement("p");
+        description.className="skanni-checklist-description";
+        description.textContent=item.description;
+        content.append(title,description);
+        row.append(marker,content);
+        container.appendChild(row);
+      });
+    }
+
+    function renderActivity() {
+      const events = Array.isArray(state.bootstrap?.activity) ? state.bootstrap.activity : [];
+      el("activityEmpty").hidden = events.length > 0;
+      el("activityList").hidden = events.length === 0;
+      if (!events.length) return;
+      const list = el("activityList");
+      list.innerHTML = "";
+      events.slice(0, 8).forEach(event => {
+        const row = document.createElement("div");
+        row.className = "check-row";
+        const icon = document.createElement("span");
+        icon.className = "check-icon";
+        icon.textContent = "•";
+        const text = document.createElement("div");
+        const strong = document.createElement("strong");
+        strong.textContent = safeText(event.label, "Wallet event");
+        const detail = document.createElement("span");
+        detail.textContent = [event.detail, formatDate(event.createdAt)].filter(Boolean).join(" · ");
+        text.append(strong, detail);
+        row.append(icon, text);
+        list.appendChild(row);
+      });
+    }
+
+    function renderBilling() {
+      const s = state.subscription;
+      if (!s) return;
+      el("billingStatus").textContent = safeText(s.status, "Unavailable");
+      el("billingStatus").className = "status-pill " + (s.status === "active" ? "success" : "warning");
+      const renewal = formatDate(s.nextRenewalAt);
+      el("renewalDate").textContent = renewal ? "Next renewal: " + renewal : "No renewal scheduled.";
+      const invoices = Array.isArray(s.invoices) ? s.invoices : [];
+      if (!invoices.length) return;
+      const list = el("invoiceList");
+      list.className = "";
+      list.innerHTML = "";
+      invoices.forEach(invoice => {
+        const row = document.createElement("div");
+        row.className = "check-row";
+        const details = document.createElement("div");
+        const title = document.createElement("strong");
+        title.textContent = safeText(invoice.amountFormatted, "$37.00 USD");
+        const copy = document.createElement("span");
+        copy.textContent = [formatDate(invoice.date), invoice.status].filter(Boolean).join(" · ");
+        details.append(title, copy);
+        row.appendChild(details);
+        if (invoice.url) {
+          const link = document.createElement("a");
+          link.className = "button small secondary";
+          link.href = invoice.url;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.textContent = "View";
+          row.appendChild(link);
+        }
+        list.appendChild(row);
+      });
+    }
+
+    function createQr(containerId, value, size = 250) {
+      const container = el(containerId);
+      container.innerHTML = "";
+      if (!value || typeof QRCode === "undefined") return null;
+      return new QRCode(container, {
+        text: value,
+        width: size,
+        height: size,
+        colorDark: "#071b2c",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    }
+
+    function renderJoinTools() {
+      const url = state.program?.joinUrl;
+      const ok = typeof url === "string" && url.startsWith("https://paymegpt.com/wallet/join/");
+      el("noJoinUrl").hidden = ok;
+      el("joinTools").hidden = !ok;
+      if (!ok) return;
+      el("joinUrl").textContent = url;
+      el("onboardingJoinUrl").textContent = url;
+      createQr("joinQr", url, 250);
+      createQr("onboardingQr", url, 220);
+    }
+
+    function getQrCanvas(containerId) {
+      return el(containerId).querySelector("canvas");
+    }
+
+    function downloadQrPng() {
+      const canvas = getQrCanvas("joinQr");
+      if (!canvas) return toast("QR code is not available.", "error");
+      const a = document.createElement("a");
+      a.download = "skanni-enrollment-qr.png";
+      a.href = canvas.toDataURL("image/png");
+      a.click();
+    }
+
+    function downloadQrSvg() {
+      const qrContainer = el("joinQr");
+      const instance = qrContainer._qrInstance;
+      const canvas = getQrCanvas("joinQr");
+      if (!canvas) return toast("QR code is not available.", "error");
+      const size = canvas.width;
+      const pixels = canvas.getContext("2d").getImageData(0, 0, size, size).data;
+      const cell = 4;
+      let paths = "";
+      for (let y = 0; y < size; y += cell) {
+        for (let x = 0; x < size; x += cell) {
+          const index = (y * size + x) * 4;
+          if (pixels[index] < 80 && pixels[index + 1] < 100 && pixels[index + 2] < 120) {
+            paths += '<rect x="' + x + '" y="' + y + '" width="' + cell + '" height="' + cell + '"/>';
+          }
+        }
+      }
+      const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + size + " " + size + '" shape-rendering="crispEdges"><rect width="100%" height="100%" fill="#fff"/><g fill="#071b2c">' + paths + "</g></svg>";
+      const blob = new Blob([svg], { type: "image/svg+xml" });
+      const a = document.createElement("a");
+      a.download = "skanni-enrollment-qr.svg";
+      a.href = URL.createObjectURL(blob);
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }
+
+    async function copyText(value) {
+      if (!value) return toast("No enrollment URL is available.", "error");
+      try {
+        await navigator.clipboard.writeText(value);
+        toast("Enrollment URL copied.", "success");
+      } catch {
+        toast("Could not copy automatically. Select the URL and copy it manually.", "error");
+      }
+    }
+
+    function loadDraft() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || "{}");
+        state.business = saved.business || {
+          name: "",
+          category: "Independent retailer",
+          contactEmail: "",
+          country: "",
+          website: "",
+          draftMetrics: {}
+        };
+        state.program = saved.program || {
+          id: "draft-program",
+          type: "punch_card",
+          config: { maxPunches: 8, rewardName: "Free treat", rewardDescription: "Collect punches and redeem a reward.", terms: null },
+          brandOverrides: { organizationName: "", backgroundColor: "#071b2c", foregroundColor: "#ffffff", labelColor: "#cfe21b" }
+        };
+        state.merchant = saved.merchant || {};
+      } catch {
+        state.business = { name: "", category: "Independent retailer", contactEmail: "", country: "", website: "", draftMetrics: {} };
+      }
+    }
+
+    function saveDraft() {
+      const payload = { business: state.business, program: state.program, merchant: state.merchant };
+      // Avoid sharing drafts across merchants on the same browser.
+      if(state.merchant?.id) localStorage.setItem("perkly-merchant-draft-"+state.merchant.id,JSON.stringify(payload));
+      renderDraftStatus();
+      toast("Draft saved to this browser. Provider card settings are unchanged.", "success");
+    }
+
+    function renderDraftStatus() {
+      el("sheetPill").classList.add("connected");
+      el("sheetPill").innerHTML = '<span class="dot"></span><span>Merchant account connected</span>';
+      el("walletPill").classList.remove("connected");
+      el("walletPill").innerHTML = '<span class="dot"></span><span>Create your loyalty card to get started</span>';
+      el("stripePill").classList.remove("connected");
+      el("stripePill").innerHTML = '<span class="dot"></span><span>Billing inactive</span>';
+    }
+
+    async function initialize() {
+      // Render a neutral shell until merchant-specific state loads.
+      state.business={name:"",category:"Independent retailer",country:"",contactEmail:"",website:"",draftMetrics:{}};
+      state.program={id:"draft-program",type:"punch_card",config:{maxPunches:8,rewardName:"Free treat"},brandOverrides:{organizationName:"",backgroundColor:"#071b2c",labelColor:"#cfe21b"}};
+      // Keep only the merchant's own local card draft. Never attach another merchant's test program.
+      if (state.program && (state.program.id === 895 || state.program.joinUrl === "https://paymegpt.com/wallet/join/fa5f9096953846e8c26fedd406d42c30ad6642acf273a34236405e44cbc9f483")) {
+        delete state.program.joinUrl;
+        delete state.program.providerStatus;
+        state.program.id = "draft-program";
+        localStorage.setItem(DRAFT_KEY, JSON.stringify({ business: state.business, program: state.program, merchant: state.merchant }));
+      }
+      renderDraftStatus();
+      populate();
+      renderJoinTools();
+      const requested = location.hash.replace("#", "");
+      showView(titles[requested] ? requested : "overview", false);
+      el("loadingScreen").hidden = true;
+      // Merchant data now comes from the private SKANNI API, not a public Sheet.
+    }
+
+    function showBlocker(reason) {
+      if (reason) toast(reason, "error");
+    }
+
+    function onboardingValues() {
+      return {
+        business: {
+          name: el("onBusinessName").value.trim(),
+          category: el("onCategory").value || "Independent retailer",
+          contactEmail: el("onEmail").value.trim(),
+          country: el("onCountry").value.trim(),
+          website: el("onWebsite").value.trim() || null
+        },
+        program: {
+          type: "punch_card",
+          config: {
+            maxPunches: Number(el("onStamps").value),
+            rewardName: el("onReward").value.trim(),
+            rewardDescription: el("onDescription").value.trim(),
+            terms: el("onTerms").value.trim() || null
+          },
+          brandOverrides: {
+            organizationName: el("onBusinessName").value.trim(),
+            logo: state.pendingLogo,
+            backgroundColor: el("onBackground").value,
+            foregroundColor: contrastColor(el("onBackground").value),
+            labelColor: el("onAccent").value
+          }
+        }
+      };
+    }
+
+    function validateOnboardingStep(step) {
+      const selectors = {
+        1: ["onBusinessName", "onCategory", "onEmail", "onCountry"],
+        3: ["onStamps", "onReward", "onDescription"]
+      };
+      for (const id of selectors[step] || []) {
+        if (!el(id).checkValidity()) {
+          el(id).reportValidity();
+          return false;
+        }
+      }
+      if (step === 2 && !state.pendingLogo && !state.program?.brandOverrides?.logo) {
+        toast("Add a company logo before continuing.", "error");
+        return false;
+      }
+      return true;
+    }
+
+    function renderOnboardingStep() {
+      document.querySelectorAll(".onboarding-step").forEach(node => node.classList.toggle("active", Number(node.dataset.step) === state.onboardingStep));
+      document.querySelectorAll(".step-dot").forEach((node, i) => {
+        node.classList.toggle("active", i + 1 === state.onboardingStep);
+        node.classList.toggle("done", i + 1 < state.onboardingStep);
+      });
+      el("onBack").disabled = state.onboardingStep === 1 || state.onboardingStep === 5;
+      el("onNext").textContent = state.onboardingStep === 4 ? "Create loyalty card" : state.onboardingStep === 5 ? "Go to overview" : "Continue";
+      if (state.onboardingStep === 4) {
+        const values = onboardingValues();
+        el("creationSummary").innerHTML =
+          '<div class="checklist">' +
+          '<div class="check-row done"><span class="check-icon">✓</span><div><strong>' + escapeHtml(values.business.name) + '</strong><span>' + escapeHtml(values.business.category) + '</span></div></div>' +
+          '<div class="check-row done"><span class="check-icon">✓</span><div><strong>' + values.program.config.maxPunches + ' stamps</strong><span>' + escapeHtml(values.program.config.rewardName) + '</span></div></div>' +
+          '<div class="check-row done"><span class="check-icon">✓</span><div><strong>Provider type: punch_card</strong><span>Creation requires server confirmation</span></div></div>' +
+          '</div>';
+      }
+    }
+
+    function escapeHtml(value) {
+      const node = document.createElement("div");
+      node.textContent = value || "";
+      return node.innerHTML;
+    }
+
+
+    // SKANNI API v2 — server-side merchant identity and program ownership.
+    const PERKLY_BACKEND = "https://perkly-wallet-bridge.lingering-field-7b1e.workers.dev";
+    let perklyJwt = sessionStorage.getItem("perkly_session") || "";
+    let perklyReady = false;
+    async function perklyRequest(path,method="GET",body,anonymous=false){
+      const response=await fetch(PERKLY_BACKEND+path,{
+        method,headers:{"Content-Type":"application/json",...(anonymous?{}:{Authorization:"Bearer "+perklyJwt})},
+        ...(body?{body:JSON.stringify(body)}:{})
+      });
+      const payload=await response.json().catch(()=>({}));
+      if(!response.ok)throw new Error(payload.error||"Backend error "+response.status);
+      return payload;
+    }
+    function perklyAuthOpen(value){document.getElementById("perklyAuthLayer").hidden=!value;}
+    function perklyExtractJoinUrl(response){
+      const possibilities=[
+        response?.joinUrl,response?.join_url,response?.program?.joinUrl,
+        response?.program?.join_url,response?.data?.joinUrl,response?.data?.program?.joinUrl,
+        response?.program?.program?.joinUrl,response?.walletProgram?.joinUrl
+      ];
+      return possibilities.find(url=>typeof url==="string" && /^https:\/\/paymegpt\.com\/wallet\/join\//.test(url))||null;
+    }
+    async function perklyLoadAccount(){
+      const result=await perklyRequest("/me");
+      const m=result.merchant;
+      state.merchant={id:m.id,name:m.businessName,email:m.email};
+      state.business={
+        name:m.businessName||"",
+        contactEmail:m.email||"",
+        category:m.category||"Independent retailer",
+        country:m.country||"",
+        website:"",
+        draftMetrics:{},
+        supportEmail:m.card?.supportEmail||m.supportEmail||""
+      };
+      // Each merchant receives their OWN program state. Never reuse the old
+      // shared browser draft or an ID from a different merchant.
+      const defaultProgram=()=>({
+        id:"draft-program",type:"punch_card",
+        config:{maxPunches:8,rewardName:"Free treat",rewardDescription:"",terms:null},
+        brandOverrides:{organizationName:m.businessName||"",backgroundColor:"#071b2c",foregroundColor:"#ffffff",labelColor:"#cfe21b"}
+      });
+      const savedKey="perkly-merchant-draft-"+m.id;
+      let saved=null;
+      try{saved=JSON.parse(localStorage.getItem(savedKey)||"null");}catch{}
+      state.program=defaultProgram();
+      if(m.programId && Number(m.programId)>0){
+        const card=m.card||{};
+        state.program={
+          ...state.program,id:Number(m.programId),joinUrl:m.joinUrl||null,
+          config:{...state.program.config,maxPunches:Number(card.maxPunches)||8,rewardName:card.rewardName||"Free treat"},
+          brandOverrides:{...state.program.brandOverrides,organizationName:card.businessName||m.businessName,
+            backgroundColor:card.backgroundColor||"#071b2c",labelColor:card.accentColor||"#cfe21b"}
+        };
+      } else if(saved?.program && saved.program.id==="draft-program"){
+        // The only permitted local draft is a draft saved for THIS merchant.
+        state.program={...state.program,...saved.program,id:"draft-program",joinUrl:null};
+      }
+      localStorage.setItem("perkly_last_merchant",m.id);
+      populate();
+      renderJoinTools();
+      if(m.programId&&Number(m.programId)>0){
+        try{
+          const p=await perklyRequest("/program");
+          if(p.program){state.program.id=p.program.id;state.program.joinUrl=perklyExtractJoinUrl(p)||state.program.joinUrl;renderJoinTools();}
+        }catch(e){console.warn("Could not refresh program",e);}
+      }
+      perklyAuthOpen(false);
+      const needsSetup=!(Number(m.programId)>0);
+      document.getElementById("perklySetupModal").hidden=!needsSetup;
+      if(needsSetup){
+        document.getElementById("setupName").value=m.businessName||"";
+        document.getElementById("setupCategory").value=m.category||"";
+        document.getElementById("setupCountry").value=m.country||"";
+        document.getElementById("setupSupportEmail").value=m.supportEmail||"";
+        skanniFillTerms();
+      }else{
+        const terms=skanniGetSavedTerms();
+        if(terms){state.program.config.terms=terms;el("onTerms").value=terms;el("rewardTerms").value=terms;}
+      }
+      el("perklyBridgeStatus").textContent="Account connected. Create your card to receive its unique QR code.";
+      el("walletPill").innerHTML='<span class="dot"></span><span>Wallet API connected</span>';
+      el("walletPill").classList.add("connected");
+      await loadCustomers();
+    }
+    async function perklyInitialize(){
+      try {
+        const status=await perklyRequest("/health","GET",null,true);
+        if(status.version!==2)return;
+        perklyReady=true;
+        document.getElementById("perklyAuthLayer").hidden=false;
+        if(perklyJwt){try{await perklyLoadAccount();return;}catch(e){perklyJwt="";sessionStorage.removeItem("perkly_session");}}
+        perklyAuthOpen(true);
+      }catch(e){
+        el("perklyBridgeStatus").textContent="Cannot connect to Wallet right now. Please try again later.";
+      }
+    }
+    async function perklyUpload(file){
+      if(!file)return;
+      if(file.size>240000)throw new Error("Logo must be smaller than 240 KB (PNG, JPG or WebP).");
+      if(!["image/png","image/jpeg","image/webp"].includes(file.type))throw new Error("Upload a PNG, JPG or WebP logo.");
+      const data=await new Promise((resolve,reject)=>{
+        const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file);
+      });
+      const encoded=data.slice(data.indexOf(",")+1);
+      return perklyRequest("/logo","POST",{mime:file.type,base64:encoded});
+    }
+    function perklyFormData(){
+      return {businessName:el("cardBusinessName").value.trim()||el("onBusinessName").value.trim(),
+        rewardName:el("cardReward").value.trim()||el("onReward").value.trim(),
+        maxPunches:Number(el("cardStamps").value||el("onStamps").value),
+        backgroundColor:el("cardBackground").value,
+        accentColor:el("cardAccent").value,
+        category:state.business?.category||"",
+        country:state.business?.country||"",
+        supportEmail:(el("settingsSupportEmail").value||state.business?.supportEmail||"").trim().toLowerCase()};
+    }
+    async function perklySaveWallet(data,logoFile){
+      if(!perklyReady||!perklyJwt)throw new Error("Sign in to your SKANNI business first.");
+      if(!data.supportEmail||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.supportEmail))throw new Error("Enter a valid customer support email to continue.");
+      if(logoFile)await perklyUpload(logoFile);
+      const result=await perklyRequest("/program",Number.isInteger(state.program?.id)&&state.program.id>0?"PATCH":"POST",data);
+      const program=result.program||{};
+      if(data.supportEmail)state.business={...state.business,supportEmail:data.supportEmail};
+      if(!Number.isInteger(Number(program.id)))throw new Error("Provider did not confirm the program ID. Check server activity before retrying.");
+      state.program={...state.program,id:Number(program.id),joinUrl:perklyExtractJoinUrl(result)||state.program.joinUrl||null};
+      saveDraft();renderJoinTools();renderChecklist();renderDraftStatus();return result;
+    }
+    function previewPerklyLogo(file,input,img){
+      if(!file){img.hidden=true;return;}
+      if(file.size>240000 || !["image/png","image/jpeg","image/webp"].includes(file.type)){
+        input.value="";img.hidden=true;toast("Logo must be PNG, JPG or WebP under 240 KB.","error");return;
+      }
+      const reader=new FileReader();
+      reader.onload=()=>{img.src=reader.result;img.hidden=false;};
+      reader.readAsDataURL(file);
+    }
+    document.getElementById("setupLogo").addEventListener("change",e=>previewPerklyLogo(e.target.files[0],e.target,document.getElementById("setupLogoPreview")));
+    document.getElementById("cardLogo").addEventListener("change",e=>{
+      const file=e.target.files[0];
+      previewPerklyLogo(file,e.target,document.getElementById("cardLogoPreview"));
+      if(file && e.target.files.length){
+        const reader=new FileReader();reader.onload=()=>{state.pendingLogo=reader.result;updatePreviews();};reader.readAsDataURL(file);
+      }
+    });
+    const SKANNI_TERMS_TEMPLATE="Each eligible purchase earns one stamp. Collect {STAMPS} stamps to receive: {REWARD}. Stamps and rewards are valid only at {BUSINESS}. Rewards cannot be exchanged for cash. Ask the business which purchases qualify. The business may refuse stamps for cancelled or refunded purchases.";
+    function skanniSuggestTerms(){
+      const name=(el("setupName").value||state.business?.name||"this business").trim();
+      const stamps=Number(el("setupStamps").value)||8;
+      const reward=(el("setupReward").value||"the advertised reward").trim();
+      return SKANNI_TERMS_TEMPLATE.replace("{BUSINESS}",name).replace("{STAMPS}",String(stamps)).replace("{REWARD}",reward);
+    }
+    function skanniTermsStorageKey(){return "skanni-program-terms-"+String(state.merchant?.id||"");}
+    function skanniGetSavedTerms(){
+      if(!state.merchant?.id)return "";
+      try{return localStorage.getItem(skanniTermsStorageKey())||"";}catch{return "";}
+    }
+    function skanniStoreTerms(value){
+      if(!state.merchant?.id)throw Error("Sign in to save the program terms.");
+      localStorage.setItem(skanniTermsStorageKey(),value);
+      state.program.config.terms=value;
+      el("rewardTerms").value=value;
+      el("onTerms").value=value;
+      el("rewardTermsStatus").textContent="Draft saved in this browser. Not published to the Wallet join page.";
+    }
+    function skanniFillTerms(){
+      const saved=skanniGetSavedTerms();
+      if(saved){el("setupTerms").value=saved;el("rewardTerms").value=saved;el("onTerms").value=saved;}
+      else {const text=skanniSuggestTerms();el("setupTerms").value=text;el("rewardTerms").value=text;el("onTerms").value=text;}
+      el("setupTerms").dataset.untouched="true";
+    }
+    ["setupName","setupStamps","setupReward"].forEach(id=>el(id).addEventListener("input",()=>{
+      if(el("setupTerms").dataset.untouched==="true")el("setupTerms").value=skanniSuggestTerms();
+    }));
+    el("setupTerms").addEventListener("input",()=>{el("setupTerms").dataset.untouched="false";});
+    document.getElementById("perklySetupForm").addEventListener("submit",async event=>{
+      event.preventDefault();
+      if(Number(state.program?.id)>0){document.getElementById("perklySetupModal").hidden=true;return;}
+      const button=document.getElementById("perklySetupSubmit");
+      button.disabled=true;button.textContent="Creating…";
+      document.getElementById("perklySetupError").textContent="";
+      const data={businessName:document.getElementById("setupName").value.trim(),category:document.getElementById("setupCategory").value,country:document.getElementById("setupCountry").value.trim(),supportEmail:document.getElementById("setupSupportEmail").value.trim().toLowerCase(),maxPunches:Number(document.getElementById("setupStamps").value),rewardName:document.getElementById("setupReward").value.trim(),backgroundColor:document.getElementById("setupBackground").value,accentColor:document.getElementById("setupAccent").value};
+      try{
+        await perklySaveWallet(data,document.getElementById("setupLogo").files[0]);
+        skanniStoreTerms(el("setupTerms").value.trim());
+        state.business={...state.business,name:data.businessName,category:data.category,country:data.country,supportEmail:data.supportEmail};
+        state.program.config={...state.program.config,maxPunches:data.maxPunches,rewardName:data.rewardName};
+        state.program.brandOverrides={...state.program.brandOverrides,organizationName:data.businessName,backgroundColor:data.backgroundColor,labelColor:data.accentColor};
+        if(document.getElementById("setupLogo").files[0])state.pendingLogo=document.getElementById("setupLogoPreview").src;
+        populate();document.getElementById("perklySetupModal").hidden=true;
+        showView("acquisition");
+        toast("Program created. Your QR code is ready.","success");
+      }catch(err){document.getElementById("perklySetupError").textContent=err.message;}
+      finally{button.disabled=false;button.textContent="Create my loyalty card";}
+    });
+    document.getElementById("perklyAuthForm").addEventListener("submit",async event=>{
+      event.preventDefault();
+      const f=event.currentTarget;
+      const btn=f.querySelector("button[type=submit]");
+      btn.disabled=true;
+      const isSignup=document.getElementById("perklyAuthMode").value==="signup";
+      document.getElementById("perklyAuthError").textContent="";
+      try{
+        const result=await perklyRequest(isSignup?"/auth/signup":"/auth/login","POST",{
+          email:document.getElementById("perklyEmail").value,
+          password:document.getElementById("perklyPassword").value,
+          businessName:document.getElementById("perklyBusiness").value
+        },true);
+        perklyJwt=result.token;
+        sessionStorage.setItem("perkly_session",perklyJwt);
+        await perklyLoadAccount();
+      }catch(e){document.getElementById("perklyAuthError").textContent=e.message;}
+      finally{btn.disabled=false;}
+    });
+    document.getElementById("perklyAuthMode").addEventListener("change",e=>{
+      const signup=e.target.value==="signup";
+      document.getElementById("perklyBusinessWrap").hidden=!signup;
+      document.getElementById("perklyBusiness").required=signup;
+      document.getElementById("perklyAuthSubmit").textContent=signup?"Create business account":"Sign in";
+    });
+    document.getElementById("perklyLogout").addEventListener("click",()=>{
+      sessionStorage.removeItem("perkly_session");perklyJwt="";perklyAuthOpen(true);
+    });
+
+
+    async function createProgram(button) {
+      setBusy(button,true,"Creating program…");
+      try{
+        const values=onboardingValues();
+        state.business={...state.business,...values.business};
+        await perklySaveWallet({
+          businessName:values.business.name,rewardName:values.program.config.rewardName,
+          maxPunches:values.program.config.maxPunches,
+          backgroundColor:values.program.brandOverrides.backgroundColor,
+          accentColor:values.program.brandOverrides.labelColor,
+          category:values.business.category,country:values.business.country
+        },el("onLogo").files[0]);
+        state.onboardingStep=5;populate();renderOnboardingStep();renderJoinTools();
+        setMessage("createProgramMessage",state.program.joinUrl?"Wallet program created! Share your QR code.":"Program created, but join URL is not yet available.","success");
+      }catch(e){setMessage("createProgramMessage",e.message,"error");}
+      finally{setBusy(button,false);}
+    }
+
+    async function updateCard(event) {
+      event.preventDefault();const button=event.submitter;setBusy(button,true,"Saving to Wallet…");
+      try{
+        const data=perklyFormData();
+        await perklySaveWallet(data,el("cardLogo").files[0]);
+        state.business={...state.business,name:data.businessName};
+        state.program.config={...state.program.config,maxPunches:data.maxPunches,rewardName:data.rewardName};
+        state.program.brandOverrides={...state.program.brandOverrides,organizationName:data.businessName,backgroundColor:data.backgroundColor,labelColor:data.accentColor};
+        populate();setMessage("cardMessage","Wallet card settings saved successfully.","success");
+      }catch(e){setMessage("cardMessage",e.message,"error");}
+      finally{setBusy(button,false);}
+    }
+
+    async function updateRewards(event) {
+      event.preventDefault();const button=event.submitter;setBusy(button,true,"Saving rewards…");
+      try{
+        const d=perklyFormData();
+        d.rewardName=el("rewardName").value.trim();d.maxPunches=Number(el("rewardStamps").value);
+        await perklySaveWallet(d,null);
+        const rules=el("rewardTerms").value.trim();
+        if(rules)skanniStoreTerms(rules);
+        state.program.config={...state.program.config,rewardName:d.rewardName,maxPunches:d.maxPunches};
+        populate();setMessage("rewardMessage","Reward settings saved. Terms saved as a browser draft; they are not yet published to the Wallet join page.","success");
+      }catch(e){setMessage("rewardMessage",e.message,"error");}
+      finally{setBusy(button,false);}
+    }
+
+    async function perklyChangeCardStatus(card,button){
+      const suspended=String(card.status).toLowerCase()==="suspended";
+      const action=suspended?"activate":"suspend";
+      const label=suspended?"reactivate":"suspend";
+      if(!confirm("Do you want to "+label+" this card for "+(card.customerName||"this customer")+"? The customer pass will remain in Wallet."))return;
+      button.disabled=true;
+      try{
+        await perklyRequest("/cards/"+encodeURIComponent(card.serial)+"/action","POST",{action});
+        toast("Card "+(suspended?"reactivated":"suspended")+" successfully.","success");
+        await loadCustomers();
+      }catch(error){
+        toast(error.message,"error");
+        button.disabled=false;
+      }
+    }
+    async function loadCustomers(page=1){
+      el("customerLoading").hidden=false;
+      try{
+        if(!perklyReady||!perklyJwt)return;
+        const r=await perklyRequest("/cards");
+        state.customers=r.cards||[];
+        const rows=el("customerRows");rows.innerHTML="";
+        for(const c of state.customers){
+          const tr=document.createElement("tr");
+          const cells=[c.customerName||"Customer",c.serial,c.state?.punches??c.state?.punchCount??0,c.status||"active", "Apple / Google",c.state?.redeemed?"Redeemed":"—"];
+          cells.forEach(v=>{const td=document.createElement("td");td.textContent=String(v??"");tr.appendChild(td);});
+          const actionCell=document.createElement("td");
+          const status=String(c.status||"active").toLowerCase();
+          if(status==="active" || status==="suspended"){
+            const button=document.createElement("button");
+            button.type="button";
+            button.className="button small secondary";
+            button.textContent=status==="active"?"Suspend":"Reactivate";
+            button.setAttribute("aria-label",button.textContent+" card for "+(c.customerName||"customer"));
+            button.addEventListener("click",()=>perklyChangeCardStatus(c,button));
+            actionCell.appendChild(button);
+          }else{actionCell.textContent="—";}
+          tr.appendChild(actionCell);
+          rows.appendChild(tr);
+        }
+        el("customerBadge").textContent=String(state.customers.length);
+        el("customerEmpty").hidden=state.customers.length>0;
+        el("customerTableArea").hidden=state.customers.length===0;
+        el("pageInfo").textContent=state.customers.length+" customers";
+        el("metricIssued").textContent=String(state.customers.length);
+        el("metricIssuedDetail").textContent="Issued customer passes in this program";
+        const active=state.customers.filter(c=>String(c.status||"active").toLowerCase()==="active").length;
+        el("metricActive").textContent=String(active);
+        // Current wallet installations, not merely issued passes.
+        // Only compute if the provider supplies the platform field on every card.
+        const platforms=state.customers.map(c=>c.platform);
+        const hasInstallData=platforms.every(p=>p===null || ["ios","android","both"].includes(p));
+        if(hasInstallData){
+          const installed=platforms.filter(p=>["ios","android","both"].includes(p)).length;
+          el("metricInstalled").textContent=String(installed);
+          el("metricPlatforms").textContent="Passes currently installed in Apple or Google Wallet";
+        }else{
+          el("metricInstalled").textContent="—";
+          el("metricPlatforms").textContent="Provider install status unavailable";
+        }
+        try{
+          const stats=await perklyRequest("/stats");
+          const total=Number(stats.rewardsRedeemed);
+          if(Number.isSafeInteger(total) && total>=0){
+            el("metricRedeemed").textContent=String(total);
+            el("metricRedeemedDetail").textContent="Confirmed reward redemptions";
+          }else{
+            el("metricRedeemed").textContent="—";
+            el("metricRedeemedDetail").textContent="Redemption count unavailable";
+          }
+        }catch(error){
+          console.warn("Could not load reward redemption count",error);
+          el("metricRedeemed").textContent="—";
+          el("metricRedeemedDetail").textContent="Could not load redemptions — try Refresh";
+        }
+      }catch(e){toast(e.message,"error");}
+      finally{el("customerLoading").hidden=true;}
+    }
+
+    function renderSheetRows() {
+      const rows = el("customerRows");
+      rows.innerHTML = "";
+      const raw = Array.isArray(state.sheetRows) ? state.sheetRows : [];
+      const safe = raw.slice(0, 20).map((row, index) => ({
+        label: row.label || row.name || row.title || row.description || `Entry ${index + 1}`,
+        detail: row.status || row.type || row.category || row.note || "Sheet row",
+        amount: row.count || row.value || row.total || "",
+      }));
+      el("customerBadge").textContent = safe.length || "0";
+      el("customerEmpty").hidden = safe.length > 0;
+      el("customerTableArea").hidden = safe.length === 0;
+      safe.forEach(item => {
+        const tr = document.createElement("tr");
+        ["Customer", "Reference", "Stamps", "Status", "Wallet", "Reward"].forEach((_, i) => {
+          const td = document.createElement("td");
+          td.textContent = i === 0 ? item.label : i === 1 ? "Customer card" : i === 2 ? (item.amount || "—") : i === 3 ? item.detail : i === 4 ? "Not connected" : "Hidden";
+          tr.appendChild(td);
+        });
+        rows.appendChild(tr);
+      });
+      el("pageInfo").textContent = safe.length ? `Showing ${safe.length} cards` : "No customer cards yet";
+      el("prevPage").disabled = true;
+      el("nextPage").disabled = true;
+    }
+
+    async function startCamera(){
+      if(!perklyReady||!perklyJwt)return toast("Sign in first.","error");
+      if(!navigator.mediaDevices?.getUserMedia||typeof BarcodeDetector==="undefined"){
+        return toast("Camera QR detection is unavailable in this browser. Use the serial field below.","error");
+      }
+      try{
+        state.mediaStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"},audio:false});
+        const video=el("scannerVideo");video.srcObject=state.mediaStream;video.hidden=false;el("cameraPlaceholder").hidden=true;
+        await video.play();el("startCamera").disabled=true;el("stopCamera").disabled=false;
+        const detector=new BarcodeDetector({formats:["qr_code","code_128"]});
+        const stream=state.mediaStream;
+        const run=async()=>{
+          if(state.mediaStream!==stream)return;
+          try{
+            const codes=await detector.detect(video);
+            if(codes.length){el("scanPayload").value=codes[0].rawValue;stopCamera();await lookupCard();return;}
+          }catch(e){console.warn("Scanner frame",e);}
+          if(state.mediaStream===stream)setTimeout(run,260);
+        };
+        run();
+      }catch(e){toast("Could not start camera: "+e.message,"error");stopCamera();}
+    }
+
+    function stopCamera() {
+      if (state.mediaStream) state.mediaStream.getTracks().forEach(track => track.stop());
+      state.mediaStream = null;
+      el("scannerVideo").srcObject = null;
+      el("scannerVideo").hidden = true;
+      el("cameraPlaceholder").hidden = false;
+      el("startCamera").disabled = false;
+      el("stopCamera").disabled = true;
+    }
+
+    async function lookupCard(){
+      const text=el("scanPayload").value.trim();
+      if(!text)return toast("Scan a customer card or enter its serial.","error");
+      try{
+        const list=await perklyRequest("/cards");
+        state.customers=list.cards||[];
+        const match=state.customers.find(c=>text===c.serial||text.includes(c.serial));
+        if(!match)throw Error("This card does not belong to your business.");
+        state.scannerCard=match;
+        const box=el("scanResult");box.innerHTML="";
+        const heading=document.createElement("p");heading.textContent=(match.customerName||"Customer")+" · "+match.serial;
+        const b1=document.createElement("button");b1.className="button";b1.textContent="Add stamp";b1.onclick=()=>scannerOperation("add_punch");
+        const b2=document.createElement("button");b2.className="button secondary";b2.textContent="Redeem";b2.onclick=()=>scannerOperation("redeem");
+        box.append(heading,b1,b2);
+      }catch(e){el("scanResult").textContent=e.message;}
+    }
+
+    async function scannerOperation(action){
+      const card=state.scannerCard;
+      if(!card||!["add_punch","redeem"].includes(action))return;
+      if(action==="redeem"&&!confirm("Confirm reward redemption?"))return;
+      try{
+        await perklyRequest("/cards/"+encodeURIComponent(card.serial)+"/action","POST",{action});
+        toast(action==="redeem"?"Reward redeemed.":"Stamp added to Wallet.","success");
+        await lookupCard();await loadCustomers();
+      }catch(e){toast(e.message,"error");}
+    }
+
+    async function saveSettings(event){
+      event.preventDefault();const button=event.submitter;setBusy(button,true,"Saving…");
+      try{
+        const supportEmail=el("settingsSupportEmail").value.trim().toLowerCase();
+        if(!el("settingsSupportEmail").checkValidity()||!supportEmail)throw Error("Enter a valid support email for the Wallet card.");
+        const data={businessName:el("settingsName").value.trim(),country:el("settingsCountry").value.trim(),category:el("settingsCategory").value.trim(),supportEmail};
+        if(!perklyReady||!perklyJwt)throw Error("Sign in first.");
+        const response=await perklyRequest("/me","PATCH",data);
+        state.business={...state.business,name:response.merchant.businessName,country:response.merchant.country,category:response.merchant.category};
+        if(Number(state.program?.id)>0){
+          const cardData={
+            businessName:response.merchant.businessName,
+            category:response.merchant.category||"",
+            country:response.merchant.country||"",
+            rewardName:state.program.config?.rewardName||"Free treat",
+            maxPunches:Number(state.program.config?.maxPunches)||8,
+            backgroundColor:state.program.brandOverrides?.backgroundColor||"#121826",
+            accentColor:state.program.brandOverrides?.labelColor||"#FF5A36",
+            supportEmail
+          };
+          await perklySaveWallet(cardData,null);
+        }else{
+          state.business.supportEmail=supportEmail;
+        }
+        saveDraft();populate();setMessage("settingsMessage",Number(state.program?.id)>0?"Business details saved and support email sent to Wallet. Check your installed card to confirm the update.":"Business details saved. The support email will be applied when you create your Wallet card.","success");
+      }catch(e){setMessage("settingsMessage",e.message,"error");}
+      finally{setBusy(button,false);}
+    }
+
+    document.querySelectorAll(".nav-button").forEach(button => button.addEventListener("click", () => {
+      showView(button.dataset.view);
+      if (button.dataset.view === "customers" && state.connected) loadCustomers(1);
+    }));
+    document.querySelectorAll("[data-go]").forEach(button => button.addEventListener("click", () => showView(button.dataset.go)));
+    const skanniTranslations={"Overview":["Visão geral","Resumen","Vue d'ensemble"],"My Loyalty Card":["O meu cartão","Mi tarjeta","Ma carte"],"Rewards":["Recompensas","Recompensas","Récompenses"],"Get Customers":["Angariar clientes","Captar clientes","Attirer des clients"],"Customers":["Clientes","Clientes","Clients"],"Staff Scanner":["Leitor da equipa","Escáner del equipo","Scanner de l'équipe"],"Billing":["Faturação","Facturación","Facturation"],"Settings":["Definições","Configuración","Paramètres"],"Set up SKANNI":["Configurar SKANNI","Configurar SKANNI","Configurer SKANNI"],"Your loyalty program at a glance.":["O seu programa de fidelização em resumo.","Tu programa de fidelización de un vistazo.","Votre programme de fidélité en un coup d'œil."],"Design and update your wallet card.":["Personalize o seu cartão.","Personaliza tu tarjeta.","Personnalisez votre carte."],"Manage the rules behind your loyalty program.":["Gerir as regras do programa.","Gestionar las reglas del programa.","Gérer les règles du programme."],"Share your enrollment link and printable QR.":["Partilhe o QR de adesão.","Comparte el QR de inscripción.","Partagez le QR d'inscription."],"Issued customer loyalty cards.":["Cartões emitidos no programa.","Tarjetas emitidas en el programa.","Cartes émises dans le programme."],"Securely stamp and redeem customer cards.":["Atribua carimbos e resgate recompensas.","Añade sellos y canjea recompensas.","Attribuez des tampons et échangez des récompenses."],"Manage your SKANNI subscription.":["Gerir a subscrição SKANNI.","Gestiona tu suscripción SKANNI.","Gérez votre abonnement SKANNI."],"Business details, privacy and access.":["Dados do negócio, privacidade e acessos.","Datos del negocio, privacidad y acceso.","Entreprise, confidentialité et accès."],"Create your real wallet loyalty program.":["Crie o seu programa de fidelização.","Crea tu programa de fidelización.","Créez votre programme de fidélité."],"Refresh":["Atualizar","Actualizar","Actualiser"],"Total cards issued":["Cartões emitidos","Tarjetas emitidas","Cartes émises"],"Active cards":["Cartões ativos","Tarjetas activas","Cartes actives"],"Wallet installs":["Instalações Wallet","Instalaciones Wallet","Ajouts au Wallet"],"Rewards redeemed":["Recompensas resgatadas","Recompensas canjeadas","Récompenses utilisées"],"Customize card & logo":["Personalizar cartão e logótipo","Personalizar tarjeta y logotipo","Personnaliser carte et logo"],"Manage customer cards":["Gerir cartões de clientes","Gestionar tarjetas","Gérer les cartes clients"],"Get QR code":["Obter código QR","Obtener código QR","Obtenir le code QR"],"Business name":["Nome do negócio","Nombre del negocio","Nom de l'établissement"],"Upload / replace logo":["Carregar / substituir logótipo","Subir / cambiar logotipo","Importer / remplacer le logo"],"Background color":["Cor de fundo","Color de fondo","Couleur de fond"],"Accent color":["Cor de destaque","Color de acento","Couleur d'accent"],"Number of stamps":["Número de carimbos","Número de sellos","Nombre de tampons"],"Reward text":["Texto da recompensa","Texto de recompensa","Texte de récompense"],"Save to wallet program":["Guardar cartão Wallet","Guardar tarjeta Wallet","Enregistrer la carte Wallet"],"Terms and conditions":["Termos e condições","Términos y condiciones","Conditions générales"],"Reward name":["Nome da recompensa","Nombre de recompensa","Nom de la récompense"],"Required stamps":["Carimbos necessários","Sellos necesarios","Tampons requis"],"Description":["Descrição","Descripción","Description"],"Save reward rules":["Guardar regras","Guardar reglas","Enregistrer les règles"],"All statuses":["Todos os estados","Todos los estados","Tous les statuts"],"Active":["Ativo","Activo","Actif"],"Suspended":["Suspenso","Suspendido","Suspendu"],"Inactive":["Inativo","Inactivo","Inactif"],"Manage":["Gerir","Gestionar","Gérer"],"Suspend":["Suspender","Suspender","Suspendre"],"Reactivate":["Reativar","Reactivar","Réactiver"],"Country":["País","País","Pays"],"Category":["Categoria","Categoría","Catégorie"],"Choose one":["Escolha uma opção","Elige una opción","Choisissez une option"],"Stamps required":["Carimbos necessários","Sellos necesarios","Tampons requis"],"Reward":["Recompensa","Recompensa","Récompense"],"Create my loyalty card":["Criar o meu cartão","Crear mi tarjeta","Créer ma carte"],"Create your loyalty card":["Crie o seu cartão","Crea tu tarjeta","Créez votre carte"],"Everything you need to launch your program, in one step.":["Tudo o que precisa num só passo.","Todo lo necesario en un paso.","Tout en une seule étape."],"Good to see you":["Bem-vindo de volta","Bienvenido de nuevo","Heureux de vous revoir"],"Sign in":["Entrar","Iniciar sesión","Se connecter"],"Create business account":["Criar conta de comerciante","Crear cuenta de comercio","Créer un compte commerçant"],"Continue":["Continuar","Continuar","Continuer"],"Back":["Voltar","Volver","Retour"]};
+    Object.assign(skanniTranslations,{"Customer support email *":["Email de apoio ao cliente *","Correo de atención al cliente *","E-mail du service client *"],"Customer support email (Wallet card)":["Email de apoio no cartão Wallet","Correo de contacto de la tarjeta Wallet","E-mail d'assistance sur la carte Wallet"]});
+    Object.assign(skanniTranslations,{"Manage your loyalty program, customer cards and rewards in one place.":["Gira o seu programa, cartões e recompensas num só lugar.","Gestiona tu programa, tarjetas y recompensas en un solo lugar.","Gérez votre programme, vos cartes et récompenses au même endroit."],"Track customer cards, manage rewards and share your QR code.":["Acompanhe os cartões, gira recompensas e partilhe o código QR.","Consulta las tarjetas, gestiona recompensas y comparte tu código QR.","Suivez les cartes, gérez les récompenses et partagez votre code QR."],"Share your QR code or enrollment link so customers can collect stamps on their phones.":["Partilhe o QR ou o link de adesão para os clientes acumularem carimbos no telemóvel.","Comparte el QR o enlace para que los clientes acumulen sellos en su móvil.","Partagez votre QR ou lien d'inscription pour permettre aux clients de collectionner des tampons."],"Edit your reward and stamp requirements. Program terms remain a browser draft until publishing is supported.":["Edite a recompensa e os carimbos necessários. Os termos ficam em rascunho neste navegador.","Modifica la recompensa y los sellos necesarios. Las condiciones quedan como borrador en este navegador.","Modifiez la récompense et le nombre de tampons. Les conditions restent en brouillon dans ce navigateur."],"Update your business information and account settings.":["Atualize os dados do negócio e as definições da conta.","Actualiza los datos del negocio y la configuración de la cuenta.","Mettez à jour les informations de votre établissement et du compte."],"No customer cards yet":["Ainda não há cartões de clientes.","Aún no hay tarjetas de clientes.","Aucune carte client pour le moment."],"Subscriptions are not active yet. No payments are charged through this dashboard.":["As subscrições ainda não estão ativas. Não são cobrados pagamentos neste dashboard.","Las suscripciones aún no están activas. No se cobran pagos desde este panel.","Les abonnements ne sont pas encore actifs. Aucun paiement n'est prélevé ici."],"Contact support about data deletion":["Contactar suporte sobre eliminação de dados","Contactar soporte para eliminar datos","Contacter l'assistance pour supprimer des données"],"Subscription management not available yet":["Gestão de subscrição ainda indisponível","Gestión de suscripción aún no disponible","Gestion d'abonnement indisponible"],"Merchant account connected":["Conta de comerciante ligada","Cuenta de comercio conectada","Compte commerçant connecté"]});
+    let skanniLanguage="en", skanniTranslationNodes;
+    function skanniTranslate(value){
+      const values=skanniTranslations[value];
+      return values ? (values[{"pt":0,"es":1,"fr":2}[skanniLanguage]]||value) : value;
+    }
+    function skanniApplyLanguage(){
+      document.documentElement.lang=skanniLanguage==="pt"?"pt-PT":skanniLanguage;
+      if(!skanniTranslationNodes){
+        skanniTranslationNodes=[];
+        const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+          acceptNode(node){
+            if(!node.parentElement||node.parentElement.closest("script,style,svg,textarea,#customerRows,#activityList,#merchantName,#merchantEmail"))return NodeFilter.FILTER_REJECT;
+            return Object.prototype.hasOwnProperty.call(skanniTranslations,node.nodeValue.trim())?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+          }
+        });
+        while(walker.nextNode())skanniTranslationNodes.push([walker.currentNode,walker.currentNode.nodeValue]);
+      }
+      for(const [node,original] of skanniTranslationNodes)if(node.isConnected)node.nodeValue=original.replace(original.trim(),skanniTranslate(original.trim()));
+      const section=document.querySelector(".nav-button.active")?.dataset.view||"overview";
+      const labels=titles[section]||titles.overview;
+      el("pageTitle").textContent=skanniTranslate(labels[0]);
+      el("pageSubtitle").textContent=skanniTranslate(labels[1]);
+    }
+    const languageSelect=document.getElementById("skanniLanguage");
+    try{skanniLanguage=localStorage.getItem("skanni-dashboard-language")||"en";}catch{}
+    if(!["en","pt","es","fr"].includes(skanniLanguage))skanniLanguage="en";
+    languageSelect.value=skanniLanguage;
+    languageSelect.addEventListener("change",()=>{
+      skanniLanguage=languageSelect.value;
+      try{localStorage.setItem("skanni-dashboard-language",skanniLanguage);}catch{}
+      skanniApplyLanguage();
+    });
+    skanniApplyLanguage();
+
+    // SVG flag icons are rendered directly, independent of emoji/font support.
+    const skanniFlags={"en":"<svg viewBox=\"0 0 60 40\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><rect width=\"60\" height=\"40\" fill=\"#012169\"/><path d=\"M0 0 60 40M60 0 0 40\" stroke=\"#fff\" stroke-width=\"9\"/><path d=\"M0 0 60 40M60 0 0 40\" stroke=\"#C8102E\" stroke-width=\"4\"/><path d=\"M30 0V40M0 20H60\" stroke=\"#fff\" stroke-width=\"13\"/><path d=\"M30 0V40M0 20H60\" stroke=\"#C8102E\" stroke-width=\"7\"/></svg>","pt":"<svg viewBox=\"0 0 60 40\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><rect width=\"24\" height=\"40\" fill=\"#006600\"/><rect x=\"24\" width=\"36\" height=\"40\" fill=\"#FF0000\"/><circle cx=\"24\" cy=\"20\" r=\"9\" fill=\"none\" stroke=\"#FFCC00\" stroke-width=\"3\"/><path d=\"M18 13h12v13l-6 4-6-4z\" fill=\"#fff\" stroke=\"#B31924\" stroke-width=\"1.5\"/><path d=\"M24 14v12M19 20h10\" stroke=\"#1759A3\" stroke-width=\"2\"/></svg>","es":"<svg viewBox=\"0 0 60 40\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><rect width=\"60\" height=\"40\" fill=\"#AA151B\"/><rect y=\"10\" width=\"60\" height=\"20\" fill=\"#F1BF00\"/><path d=\"M16 16h8v9l-4 2-4-2z\" fill=\"#fff\" stroke=\"#AA151B\" stroke-width=\"1.4\"/><path d=\"M20 13v13\" stroke=\"#AA151B\" stroke-width=\"2\"/></svg>","fr":"<svg viewBox=\"0 0 60 40\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><rect width=\"20\" height=\"40\" fill=\"#002395\"/><rect x=\"20\" width=\"20\" height=\"40\" fill=\"#fff\"/><rect x=\"40\" width=\"20\" height=\"40\" fill=\"#ED2939\"/></svg>"};
+    const skanniFlagTrigger=document.getElementById("skanniLanguageTrigger");
+    const skanniFlagMenu=document.getElementById("skanniLanguageMenu");
+    function skanniSyncFlag(){
+      document.getElementById("skanniActiveFlag").innerHTML=skanniFlags[languageSelect.value];
+      document.getElementById("skanniLanguageCode").textContent=languageSelect.value.toUpperCase();
+      skanniFlagMenu.querySelectorAll("[data-skanni-lang]").forEach(button=>button.setAttribute("aria-checked",String(button.dataset.skanniLang===languageSelect.value)));
+    }
+    function skanniCloseFlagMenu(){
+      skanniFlagMenu.hidden=true;skanniFlagTrigger.setAttribute("aria-expanded","false");
+    }
+    skanniFlagTrigger.addEventListener("click",()=>{
+      skanniFlagMenu.hidden=!skanniFlagMenu.hidden;
+      skanniFlagTrigger.setAttribute("aria-expanded",String(!skanniFlagMenu.hidden));
+    });
+    skanniFlagMenu.querySelectorAll("[data-skanni-lang]").forEach(button=>button.addEventListener("click",()=>{
+      languageSelect.value=button.dataset.skanniLang;
+      languageSelect.dispatchEvent(new Event("change",{bubbles:true}));
+      skanniSyncFlag();skanniCloseFlagMenu();skanniFlagTrigger.focus();
+    }));
+    document.addEventListener("click",event=>{if(!event.target.closest(".skanni-language-picker"))skanniCloseFlagMenu();});
+    document.addEventListener("keydown",event=>{if(event.key==="Escape")skanniCloseFlagMenu();});
+    skanniSyncFlag();
+
+
+    el("menuToggle").addEventListener("click", openSidebar);
+    el("mobileBackdrop").addEventListener("click", closeSidebar);
+    el("refreshButton").addEventListener("click", async () => {
+      if(!perklyReady||!perklyJwt)return toast("Please sign in first.","error");
+      try{
+        await perklyLoadAccount();
+        toast("Account and Wallet data refreshed.","success");
+      }catch(e){toast(e.message,"error");}
+    });
+
+    ["onBusinessName", "onReward", "onStamps", "cardBusinessName", "cardReward", "cardStamps"].forEach(id => el(id).addEventListener("input", updatePreviews));
+    bindColorControls();
+
+    el("onLogo").addEventListener("change", async event => {
+      try {
+        state.pendingLogo = await readLogo(event.target.files[0]);
+        updatePreviews();
+        toast("Logo ready. It will upload when the program is created.", "success");
+      } catch (error) {
+        event.target.value = "";
+        toast(error.message, "error");
+      }
+    });
+
+    el("onNext").addEventListener("click", async event => {
+      if (state.onboardingStep === 5) return showView("overview");
+      if (!validateOnboardingStep(state.onboardingStep)) return;
+      if (state.onboardingStep === 4) return createProgram(event.currentTarget);
+      state.onboardingStep++;
+      renderOnboardingStep();
+    });
+    el("onBack").addEventListener("click", () => {
+      if (state.onboardingStep > 1) state.onboardingStep--;
+      renderOnboardingStep();
+    });
+
+    el("cardForm").addEventListener("submit", updateCard);
+    el("rewardForm").addEventListener("submit", updateRewards);
+    el("settingsForm").addEventListener("submit", saveSettings);
+
+    el("copyJoin").addEventListener("click", () => copyText(state.program?.joinUrl));
+    el("onCopyLink").addEventListener("click", () => copyText(state.program?.joinUrl));
+    el("downloadPng").addEventListener("click", downloadQrPng);
+    el("downloadSvg").addEventListener("click", downloadQrSvg);
+    el("printPoster").addEventListener("click", () => window.print());
+
+    el("customerRefresh").addEventListener("click", () => loadCustomers());
+    el("customerStatus").addEventListener("change", () => loadCustomers());
+    el("customerPlatform").addEventListener("change", () => loadCustomers());
+    let searchTimer;
+    el("customerSearch").addEventListener("input", () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => loadCustomers(), 350);
+    });
+    el("prevPage").addEventListener("click", () => {});
+    el("nextPage").addEventListener("click", () => {});
+
+    el("startCamera").addEventListener("click", startCamera);
+    el("stopCamera").addEventListener("click", stopCamera);
+    el("lookupCard").addEventListener("click", lookupCard);
+    el("manageBilling").addEventListener("click", () => toast("Billing is not available yet.", "error"));
+    
+
+    function fetchSheetData() {
+      const url = document.querySelector('meta[name="sheet-data-url"]')?.content;
+      if (!url) {
+        state.sheetRows = [];
+        renderSheetRows();
+        return;
+      }
+      state.sheetLoading = true;
+      fetch(url)
+        .then(r => r.json())
+        .then(result => {
+          if (!result || !Array.isArray(result.data)) throw new Error("Invalid sheet response.");
+          const rows = result.data || [];
+          state.sheetRows = rows.map(row => {
+            const copy = { ...row };
+            delete copy.email;
+            delete copy.phone;
+            delete copy.contactEmail;
+            delete copy.contactPhone;
+            delete copy.name;
+            delete copy.fullName;
+            return copy;
+          });
+          renderSheetRows();
+        })
+        .catch(() => {
+          state.sheetRows = [];
+          renderSheetRows();
+        })
+        .finally(() => { state.sheetLoading = false; });
+    }
+
+    window.addEventListener("beforeunload", stopCamera);
+    renderOnboardingStep();
+    updatePreviews();
+    initialize();
+    perklyInitialize();
+  </script>
+
+</body>
+</html>
